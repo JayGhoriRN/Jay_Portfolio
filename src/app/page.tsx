@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Github,
   Linkedin,
@@ -24,42 +24,59 @@ import {
   Heart,
   Coffee,
   Briefcase,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ThemeToggle } from "../components/theme-toggle" // Import ThemeToggle
-import TestimonialsSection from "../components/TestimonialsSection" // Import TestimonialsSection
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "../components/theme-toggle"; // Import ThemeToggle
+import TestimonialsSection from "../components/TestimonialsSection"; // Import TestimonialsSection
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("hero")
-  const { scrollYProgress } = useScroll()
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
+  const [activeSection, setActiveSection] = useState("hero");
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "experience", "skills", "projects", "testimonials", "contact"] // Added 'testimonials'
-      const scrollPosition = window.scrollY + 100
+      const sections = [
+        "hero",
+        "about",
+        "experience",
+        "skills",
+        "projects",
+        "testimonials",
+        "contact",
+      ]; // Added 'testimonials'
+      const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
-        const element = document.getElementById(section)
+        const element = document.getElementById(section);
         if (element) {
-          const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
+          const { offsetTop, offsetHeight } = element;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
           }
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
-  }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-screen">
@@ -74,7 +91,10 @@ export default function Portfolio() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <motion.div className="text-2xl font-bold text-white dark:text-black" whileHover={{ scale: 1.05 }}>
+            <motion.div
+              className="text-2xl font-bold text-white dark:text-black"
+              whileHover={{ scale: 1.05 }}
+            >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
                 Jay Ghori
               </span>
@@ -140,12 +160,20 @@ export default function Portfolio() {
               scale: [1.2, 1, 1.2],
               opacity: [0.5, 0.3, 0.5],
             }}
-            transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, delay: 2 }}
+            transition={{
+              duration: 4,
+              repeat: Number.POSITIVE_INFINITY,
+              delay: 2,
+            }}
           />
         </motion.div>
 
         <div className="relative z-10 text-center px-4">
-          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <motion.div
               className="mb-6"
               initial={{ opacity: 0, scale: 0.5 }}
@@ -156,7 +184,11 @@ export default function Portfolio() {
                 <motion.div
                   className="w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 rounded-full p-1 animate-pulse-glow dark:from-purple-400 dark:to-blue-400"
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                  transition={{
+                    duration: 20,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
                 >
                   <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center dark:bg-gray-50">
                     <Code className="w-16 h-16 text-purple-400 dark:text-purple-700" />
@@ -189,8 +221,11 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               Senior Frontend Developer with{" "}
-              <span className="text-purple-400 font-semibold dark:text-purple-700">3.9+ years</span> of experience in
-              React.js, React Native, and modern web technologies
+              <span className="text-purple-400 font-semibold dark:text-purple-700">
+                4 years
+              </span>{" "}
+              of experience in React.js, React Native, and modern web
+              technologies
             </motion.p>
 
             <motion.div
@@ -199,15 +234,24 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <motion.div className="flex items-center gap-2" whileHover={{ scale: 1.05, color: "#a855f7" }}>
+              <motion.div
+                className="flex items-center gap-2"
+                whileHover={{ scale: 1.05, color: "#a855f7" }}
+              >
                 <MapPin className="w-4 h-4" />
                 <span>Surat, Gujarat</span>
               </motion.div>
-              <motion.div className="flex items-center gap-2" whileHover={{ scale: 1.05, color: "#3b82f6" }}>
+              <motion.div
+                className="flex items-center gap-2"
+                whileHover={{ scale: 1.05, color: "#3b82f6" }}
+              >
                 <Phone className="w-4 h-4" />
                 <span>+91-74053 99873</span>
               </motion.div>
-              <motion.div className="flex items-center gap-2" whileHover={{ scale: 1.05, color: "#10b981" }}>
+              <motion.div
+                className="flex items-center gap-2"
+                whileHover={{ scale: 1.05, color: "#10b981" }}
+              >
                 <Coffee className="w-4 h-4" />
                 <span>Available for work</span>
               </motion.div>
@@ -219,7 +263,10 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300 dark:from-purple-700 dark:to-blue-700 dark:hover:from-purple-800 dark:hover:to-blue-800"
@@ -230,7 +277,10 @@ export default function Portfolio() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   variant="outline"
                   size="lg"
@@ -258,7 +308,7 @@ export default function Portfolio() {
                 },
                 {
                   icon: Linkedin,
-                  href: "https://linkedin.com/in/jay-ghori",
+                  href: "https://www.linkedin.com/in/jay-ghori-99b7641a0/",
                   color: "hover:text-blue-400 dark:hover:text-blue-600",
                 },
                 {
@@ -329,7 +379,11 @@ export default function Portfolio() {
                       animate={{
                         rotate: [0, 360],
                       }}
-                      transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                      transition={{
+                        duration: 10,
+                        repeat: Number.POSITIVE_INFINITY,
+                        ease: "linear",
+                      }}
                     />
                     <Code className="w-32 h-32 text-purple-400 relative z-10 dark:text-purple-700" />
                   </div>
@@ -344,7 +398,11 @@ export default function Portfolio() {
                 <motion.div
                   className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full p-3 dark:from-blue-700 dark:to-purple-700"
                   animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
+                  transition={{
+                    duration: 2,
+                    repeat: Number.POSITIVE_INFINITY,
+                    delay: 1,
+                  }}
                 >
                   <Heart className="w-6 h-6 text-white" />
                 </motion.div>
@@ -361,28 +419,42 @@ export default function Portfolio() {
               <div className="space-y-4">
                 <p className="text-lg text-foreground leading-relaxed dark:text-gray-700">
                   Results-driven Software Developer with{" "}
-                  <span className="text-purple-400 font-semibold dark:text-purple-700">3.9+ years</span> of experience
-                  in building scalable web and mobile applications using{" "}
-                  <span className="text-blue-400 font-semibold dark:text-blue-700">React.js</span>,{" "}
-                  <span className="text-blue-400 font-semibold dark:text-blue-700">React Native</span>, JavaScript, and
-                  TypeScript.
+                  <span className="text-purple-400 font-semibold dark:text-purple-700">
+                    4 years
+                  </span>{" "}
+                  of experience in building scalable web and mobile applications
+                  using{" "}
+                  <span className="text-blue-400 font-semibold dark:text-blue-700">
+                    React.js
+                  </span>
+                  ,{" "}
+                  <span className="text-blue-400 font-semibold dark:text-blue-700">
+                    React Native
+                  </span>
+                  , JavaScript, and TypeScript.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed dark:text-gray-700">
-                  Experienced in integrating RESTful APIs and GraphQL, managing state with Redux and Context API.
+                  Experienced in integrating RESTful APIs and GraphQL, managing
+                  state with Redux and Context API.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
                   {
-                    number: "3.9+",
+                    number: "4",
                     label: "Years Experience",
                     icon: Calendar,
                     color: "text-purple-400 dark:text-purple-700",
                   },
-                  { number: "15K+", label: "App Downloads", icon: Download, color: "text-blue-400 dark:text-blue-700" },
                   {
-                    number: "50+",
+                    number: "15K+",
+                    label: "App Downloads",
+                    icon: Download,
+                    color: "text-blue-400 dark:text-blue-700",
+                  },
+                  {
+                    number: "30+",
                     label: "Projects Completed",
                     icon: Briefcase,
                     color: "text-green-400 dark:text-green-700",
@@ -403,9 +475,15 @@ export default function Portfolio() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-2`} />
-                    <div className={`text-3xl font-bold ${stat.color}`}>{stat.number}</div>
-                    <div className="text-muted-foreground text-sm dark:text-gray-700">{stat.label}</div>
+                    <stat.icon
+                      className={`w-8 h-8 ${stat.color} mx-auto mb-2`}
+                    />
+                    <div className={`text-3xl font-bold ${stat.color}`}>
+                      {stat.number}
+                    </div>
+                    <div className="text-muted-foreground text-sm dark:text-gray-700">
+                      {stat.label}
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -414,7 +492,10 @@ export default function Portfolio() {
         </div>
       </section>
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-4 bg-background dark:bg-gray-200">
+      <section
+        id="experience"
+        className="py-20 px-4 bg-background dark:bg-gray-200"
+      >
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -449,7 +530,13 @@ export default function Portfolio() {
                   "Collaborated directly with clients to gather requirements and deliver customized solutions",
                   "Coordinated with cross-functional teams for optimized performance and maintainable code architecture",
                 ],
-                skills: ["React.js", "React Native", "Stripe", "Razorpay", "Team Leadership"],
+                skills: [
+                  "React.js",
+                  "React Native",
+                  "Stripe",
+                  "Razorpay",
+                  "Team Leadership",
+                ],
               },
               {
                 company: "ACRU | Joyeux",
@@ -463,7 +550,13 @@ export default function Portfolio() {
                   "Contributed to multiple products including SaaS-based jewellery platform and PWA",
                   "Worked closely with founders, designers, and backend teams to deliver high-performing apps",
                 ],
-                skills: ["React Native", "Fintech", "PWA", "Digital Payments", "Startup"],
+                skills: [
+                  "React Native",
+                  "Fintech",
+                  "PWA",
+                  "Digital Payments",
+                  "Startup",
+                ],
               },
               {
                 company: "Daydream Soft Infotech",
@@ -476,7 +569,13 @@ export default function Portfolio() {
                   "Built Wordle-style game from scratch showcasing frontend development skills",
                   "Participated in issue tracking with JIRA and practiced Git-based version control in CI/CD workflows",
                 ],
-                skills: ["React Native", "JIRA", "Git", "Game Development", "International Team"],
+                skills: [
+                  "React Native",
+                  "JIRA",
+                  "Git",
+                  "Game Development",
+                  "International Team",
+                ],
               },
             ].map((job, index) => (
               <motion.div
@@ -501,7 +600,9 @@ export default function Portfolio() {
                         </div>
                       </div>
                       <div className="text-right mt-2 md:mt-0">
-                        <div className="text-gray-700 font-medium dark:text-gray-700">{job.duration}</div>
+                        <div className="text-gray-700 font-medium dark:text-gray-700">
+                          {job.duration}
+                        </div>
                         <div className="text-gray-600 text-sm flex items-center gap-1 justify-end dark:text-gray-600">
                           <MapPin className="w-3 h-3" />
                           {job.location}
@@ -520,7 +621,9 @@ export default function Portfolio() {
                           transition={{ duration: 0.5, delay: i * 0.1 }}
                           viewport={{ once: true }}
                         >
-                          <span className="text-purple-700 mr-3 mt-1 text-lg dark:text-purple-700">•</span>
+                          <span className="text-purple-700 mr-3 mt-1 text-lg dark:text-purple-700">
+                            •
+                          </span>
                           {achievement}
                         </motion.li>
                       ))}
@@ -577,21 +680,33 @@ export default function Portfolio() {
               {
                 icon: Smartphone,
                 title: "Frontend",
-                skills: ["React Native", "React.js", "Vue.js", "Next.js", "Android"],
+                skills: [
+                  "React Native",
+                  "React.js",
+                  "Vue.js",
+                  "Next.js",
+                  "Android",
+                ],
                 color: "from-blue-500 to-cyan-500",
                 darkColor: "from-blue-600 to-cyan-600",
               },
               {
                 icon: Database,
                 title: "Backend & DB",
-                skills: ["Node.js", "Firebase", "SQLite", "MongoDB", "PostgreSQL"],
+                skills: [
+                  "Node.js",
+                  "Firebase",
+                  "SQLite",
+                  "MongoDB",
+                  "PostgreSQL",
+                ],
                 color: "from-green-500 to-emerald-500",
                 darkColor: "from-green-600 to-emerald-600",
               },
               {
                 icon: Zap,
                 title: "Tools & Others",
-                skills: ["Git", "Docker", "AWS", "Figma", "JIRA", "Postman"],
+                skills: ["Git", "Docker", "Figma", "JIRA", "Postman"],
                 color: "from-purple-500 to-pink-500",
                 darkColor: "from-purple-600 to-pink-600",
               },
@@ -642,7 +757,10 @@ export default function Portfolio() {
         </div>
       </section>
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-black/20 dark:bg-gray-200">
+      <section
+        id="projects"
+        className="py-20 px-4 bg-black/20 dark:bg-gray-200"
+      >
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -669,7 +787,12 @@ export default function Portfolio() {
                 title: "SportEco",
                 description:
                   "India's largest sports community platform enabling athletes, coaches, and organizations to collaborate and grow",
-                tech: ["React Native", "Razorpay", "Push Notifications", "Event Management"],
+                tech: [
+                  "React Native",
+                  "Razorpay",
+                  "Push Notifications",
+                  "Event Management",
+                ],
                 image: "/placeholder.svg?height=200&width=300",
                 year: "2025",
                 status: "Live",
@@ -681,7 +804,12 @@ export default function Portfolio() {
                 title: "Livway Healthcare",
                 description:
                   "Healthcare platform delivering smart, tech-driven medical services with doctor-patient interaction features",
-                tech: ["React Native", "Healthcare APIs", "Real-time Chat", "Task Management"],
+                tech: [
+                  "React Native",
+                  "Healthcare APIs",
+                  "Real-time Chat",
+                  "Task Management",
+                ],
                 image: "/placeholder.svg?height=200&width=300",
                 year: "2024",
                 status: "Live",
@@ -693,7 +821,12 @@ export default function Portfolio() {
                 title: "ACRU - Save Now Buy Later",
                 description:
                   "Digital micro-savings and investment platform for Indians, NRIs offering Digital Gold, Silver, and Mutual Funds",
-                tech: ["React Native", "React.js", "Financial APIs", "Cross-border Payments"],
+                tech: [
+                  "React Native",
+                  "React.js",
+                  "Financial APIs",
+                  "Cross-border Payments",
+                ],
                 image: "/placeholder.svg?height=200&width=300",
                 year: "2024",
                 status: "Live",
@@ -705,7 +838,12 @@ export default function Portfolio() {
                 title: "Joyeux - Financial Gifting",
                 description:
                   "Digital gold/silver gifting app with 15K+ downloads, featuring seamless payment integration",
-                tech: ["React Native", "Java Backend", "Paytm Integration", "Digital Gifting"],
+                tech: [
+                  "React Native",
+                  "Java Backend",
+                  "Paytm Integration",
+                  "Digital Gifting",
+                ],
                 image: "/placeholder.svg?height=200&width=300",
                 year: "2023",
                 status: "Live",
@@ -715,8 +853,14 @@ export default function Portfolio() {
               },
               {
                 title: "Duka E-commerce Platform",
-                description: "Comprehensive retail system with admin panel, cashier portal, and customer website",
-                tech: ["React.js", "Node.js", "Inventory Management", "Role Management"],
+                description:
+                  "Comprehensive retail system with admin panel, cashier portal, and customer website",
+                tech: [
+                  "React.js",
+                  "Node.js",
+                  "Inventory Management",
+                  "Role Management",
+                ],
                 image: "/placeholder.svg?height=200&width=300",
                 year: "2022",
                 status: "Completed",
@@ -726,7 +870,8 @@ export default function Portfolio() {
               },
               {
                 title: "Time Sheets Tracker",
-                description: "Web-based time tracking system with role-based workflows and enhanced API handling",
+                description:
+                  "Web-based time tracking system with role-based workflows and enhanced API handling",
                 tech: ["React", "TypeScript", "REST API", "Clean Code"],
                 image: "/placeholder.svg?height=200&width=300",
                 year: "2021",
@@ -770,7 +915,10 @@ export default function Portfolio() {
 
                     {/* Action Buttons */}
                     <div className="absolute bottom-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
                         <Button
                           size="sm"
                           variant="secondary"
@@ -779,7 +927,10 @@ export default function Portfolio() {
                           <Github className="w-4 h-4" />
                         </Button>
                       </motion.div>
-                      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
                         <Button
                           size="sm"
                           variant="secondary"
@@ -851,7 +1002,8 @@ export default function Portfolio() {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto mb-8 dark:from-purple-700 dark:to-blue-700" />
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto dark:text-gray-700">
-              Ready to bring your ideas to life? Let's collaborate and create something amazing together.
+              Ready to bring your ideas to life? Let's collaborate and create
+              something amazing together.
             </p>
           </motion.div>
 
@@ -875,7 +1027,7 @@ export default function Portfolio() {
               {
                 icon: Linkedin,
                 label: "LinkedIn",
-                href: "https://linkedin.com/in/jay-ghori",
+                href: "https://www.linkedin.com/in/jay-ghori-99b7641a0/",
                 gradient: "from-blue-600 to-cyan-600",
                 hoverGradient: "from-blue-700 to-cyan-700",
                 darkGradient: "from-blue-700 to-cyan-700",
@@ -918,12 +1070,16 @@ export default function Portfolio() {
                   <div className="p-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg dark:from-blue-700 dark:to-purple-700">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-foreground dark:text-gray-900">Education</CardTitle>
+                  <CardTitle className="text-foreground dark:text-gray-900">
+                    Education
+                  </CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="text-foreground dark:text-gray-700">
                 <div className="space-y-3">
-                  <div className="font-semibold text-lg">Bachelor of Engineering in Information Technology</div>
+                  <div className="font-semibold text-lg">
+                    Bachelor of Engineering in Information Technology
+                  </div>
                   <div className="text-purple-600 font-medium dark:text-purple-600">
                     Gujarat Technological University
                   </div>
@@ -941,13 +1097,19 @@ export default function Portfolio() {
                   <div className="p-2 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg dark:from-green-700 dark:to-blue-700">
                     <Award className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-foreground dark:text-gray-900">Certification</CardTitle>
+                  <CardTitle className="text-foreground dark:text-gray-900">
+                    Certification
+                  </CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="text-foreground dark:text-gray-700">
                 <div className="space-y-3">
-                  <div className="font-semibold text-lg">Mobile App Development (Android)</div>
-                  <div className="text-purple-600 font-medium dark:text-purple-600">Microsoft & Certipor</div>
+                  <div className="font-semibold text-lg">
+                    Mobile App Development (Android)
+                  </div>
+                  <div className="text-purple-600 font-medium dark:text-purple-600">
+                    Microsoft & Certipor
+                  </div>
                   <div className="text-muted-foreground text-sm flex items-center gap-2 dark:text-gray-600">
                     <Calendar className="w-4 h-4" />
                     Aug 2020 – Feb 2022
@@ -962,13 +1124,19 @@ export default function Portfolio() {
       <footer className="py-8 px-4 border-t border-white/10 bg-black/30 dark:bg-gray-300 dark:border-black/10">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-gray-400 text-center md:text-left dark:text-gray-700">
-              <p>© 2024 Jay Ghori. Built with ❤️ using React, Next.js, and Framer Motion.</p>
+            <div className="text-gray-400 text-center md:text-left dark:text-black-900">
+              <p>
+                © 2024 Jay Ghori. Built with ❤️ using React, Next.js, and Framer
+                Motion.
+              </p>
             </div>
             <div className="flex gap-4">
               {[
                 { icon: Github, href: "https://github.com/jayghori" },
-                { icon: Linkedin, href: "https://linkedin.com/in/jay-ghori" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/jay-ghori-99b7641a0/",
+                },
                 { icon: Mail, href: "mailto:jayghori2662@gmail.com" },
               ].map((social, index) => (
                 <motion.a
@@ -986,5 +1154,5 @@ export default function Portfolio() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

@@ -222,7 +222,7 @@ export default function Portfolio() {
             >
               Senior Frontend Developer with{" "}
               <span className="text-purple-400 font-semibold dark:text-purple-700">
-                3.9+ years
+                4 years
               </span>{" "}
               of experience in React.js, React Native, and modern web
               technologies
@@ -308,7 +308,7 @@ export default function Portfolio() {
                 },
                 {
                   icon: Linkedin,
-                  href: "https://linkedin.com/in/jay-ghori",
+                  href: "https://www.linkedin.com/in/jay-ghori-99b7641a0/",
                   color: "hover:text-blue-400 dark:hover:text-blue-600",
                 },
                 {
@@ -385,6 +385,12 @@ export default function Portfolio() {
                         ease: "linear",
                       }}
                     />
+                    {/* User Photo */}
+                    <img
+                      src="/myPhoto.jpeg"
+                      alt="Jay Ghori"
+                      className="w-62 h-62 rounded-full object-cover border-4 border-white shadow-lg z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
                     <Code className="w-32 h-32 text-purple-400 relative z-10 dark:text-purple-700" />
                   </div>
                 </motion.div>
@@ -420,7 +426,7 @@ export default function Portfolio() {
                 <p className="text-lg text-foreground leading-relaxed dark:text-gray-700">
                   Results-driven Software Developer with{" "}
                   <span className="text-purple-400 font-semibold dark:text-purple-700">
-                    3.9+ years
+                    4 years
                   </span>{" "}
                   of experience in building scalable web and mobile applications
                   using{" "}
@@ -442,7 +448,7 @@ export default function Portfolio() {
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
                   {
-                    number: "3.9+",
+                    number: "4",
                     label: "Years Experience",
                     icon: Calendar,
                     color: "text-purple-400 dark:text-purple-700",
@@ -454,7 +460,7 @@ export default function Portfolio() {
                     color: "text-blue-400 dark:text-blue-700",
                   },
                   {
-                    number: "50+",
+                    number: "30+",
                     label: "Projects Completed",
                     icon: Briefcase,
                     color: "text-green-400 dark:text-green-700",
@@ -523,7 +529,7 @@ export default function Portfolio() {
                 position: "Senior Frontend Developer",
                 duration: "December 2023 – June 2025",
                 location: "Gujarat, India",
-                logo: "🚀",
+                logo: "/onrois_logo.jpeg",
                 achievements: [
                   "Led and managed multiple end-to-end web and mobile app projects using React.js and React Native",
                   "Integrated Stripe, Razorpay, and React Native In-App Purchase (IAP) for secure payment flows",
@@ -543,7 +549,7 @@ export default function Portfolio() {
                 position: "Software Developer",
                 duration: "June 2022 – November 2023",
                 location: "Bangalore, Karnataka, India",
-                logo: "💎",
+                logo: "/acruindia_logo.jpeg",
                 achievements: [
                   "Joined as founding team developer in fintech startup, building core architecture from ground up",
                   "Led development of Micro Savings & Investment Platform and Digital Gold/Silver Gifting App",
@@ -563,7 +569,7 @@ export default function Portfolio() {
                 position: "React Native Developer",
                 duration: "August 2021 – April 2022",
                 location: "Gujarat, India",
-                logo: "💭",
+                logo: "/daydreamsoft_logo.jpeg",
                 achievements: [
                   "Worked with Korean-based IT company on Corona Test Claim App maintenance and customization",
                   "Built Wordle-style game from scratch showcasing frontend development skills",
@@ -589,7 +595,12 @@ export default function Portfolio() {
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                       <div className="flex items-start gap-4">
-                        <div className="text-4xl">{job.logo}</div>
+                        {/* <div className="text-4xl">{job.logo}</div> */}
+                        <img
+                          src={job.logo}
+                          alt={job.company + " photo"}
+                          className="w-12 h-12 rounded-full object-cover mr-4 bg-white"
+                        />
                         <div>
                           <CardTitle className="text-foreground text-xl mb-2 group-hover:text-purple-700 transition-colors dark:text-gray-900 dark:group-hover:text-purple-700">
                             {job.position}
@@ -706,7 +717,7 @@ export default function Portfolio() {
               {
                 icon: Zap,
                 title: "Tools & Others",
-                skills: ["Git", "Docker", "AWS", "Figma", "JIRA", "Postman"],
+                skills: ["Git", "Figma", "JIRA", "Postman", "Bitbucket"],
                 color: "from-purple-500 to-pink-500",
                 darkColor: "from-purple-600 to-pink-600",
               },
@@ -793,7 +804,7 @@ export default function Portfolio() {
                   "Push Notifications",
                   "Event Management",
                 ],
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/sporteco_banner.jpeg",
                 year: "2025",
                 status: "Live",
                 category: "Mobile App",
@@ -810,7 +821,7 @@ export default function Portfolio() {
                   "Real-time Chat",
                   "Task Management",
                 ],
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/livway_banner.jpeg",
                 year: "2024",
                 status: "Live",
                 category: "Healthcare",
@@ -827,7 +838,7 @@ export default function Portfolio() {
                   "Financial APIs",
                   "Cross-border Payments",
                 ],
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/acru_banner.jpeg",
                 year: "2024",
                 status: "Live",
                 category: "Fintech",
@@ -844,7 +855,7 @@ export default function Portfolio() {
                   "Paytm Integration",
                   "Digital Gifting",
                 ],
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/joyeux_banner.jpeg",
                 year: "2023",
                 status: "Live",
                 category: "Fintech",
@@ -852,16 +863,16 @@ export default function Portfolio() {
                 darkGradient: "from-purple-600 to-pink-600",
               },
               {
-                title: "Duka E-commerce Platform",
+                title: "French Florist E-commerce Platform",
                 description:
-                  "Comprehensive retail system with admin panel, cashier portal, and customer website",
+                  "Developed a fast, SEO-optimized e-commerce platform with React.js and Next.js, reducing load times by 80% and increasing organic traffic by 50%.",
                 tech: [
                   "React.js",
-                  "Node.js",
+                  "Next.js",
                   "Inventory Management",
                   "Role Management",
                 ],
-                image: "/placeholder.svg?height=200&width=300",
+                image: "/french_banner.jpeg",
                 year: "2022",
                 status: "Completed",
                 category: "E-commerce",
@@ -872,8 +883,8 @@ export default function Portfolio() {
                 title: "Time Sheets Tracker",
                 description:
                   "Web-based time tracking system with role-based workflows and enhanced API handling",
-                tech: ["React", "TypeScript", "REST API", "Clean Code"],
-                image: "/placeholder.svg?height=200&width=300",
+                tech: ["React", "TypeScript", "REST API", "Redux"],
+                image: "/time_banner.jpeg",
                 year: "2021",
                 status: "Completed",
                 category: "Productivity",
@@ -890,11 +901,11 @@ export default function Portfolio() {
               >
                 <Card className="backdrop-blur-sm hover:bg-card/90 transition-all duration-300 group overflow-hidden h-full dark:bg-gray-100/50 dark:border-gray-300 dark:hover:bg-gray-200/50">
                   <div className="relative overflow-hidden">
-                    <div
-                      className={`w-full h-48 bg-gradient-to-br ${project.gradient} dark:${project.darkGradient} flex items-center justify-center`}
-                    >
-                      <Monitor className="w-16 h-16 text-white/80" />
-                    </div>
+                    <img
+                      src={project.image}
+                      alt={project.title + " banner"}
+                      className="w-full h-48 object-cover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     {/* Status Badge */}
@@ -914,7 +925,7 @@ export default function Portfolio() {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="absolute bottom-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* <div className="absolute bottom-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <motion.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
@@ -939,7 +950,7 @@ export default function Portfolio() {
                           <ExternalLink className="w-4 h-4" />
                         </Button>
                       </motion.div>
-                    </div>
+                    </div> */}
 
                     {/* Year Badge */}
                     <div className="absolute bottom-4 right-4 bg-purple-600 text-white px-2 py-1 rounded text-sm font-medium dark:bg-purple-700">
@@ -1027,7 +1038,7 @@ export default function Portfolio() {
               {
                 icon: Linkedin,
                 label: "LinkedIn",
-                href: "https://linkedin.com/in/jay-ghori",
+                href: "https://www.linkedin.com/in/jay-ghori-99b7641a0/",
                 gradient: "from-blue-600 to-cyan-600",
                 hoverGradient: "from-blue-700 to-cyan-700",
                 darkGradient: "from-blue-700 to-cyan-700",
@@ -1124,16 +1135,18 @@ export default function Portfolio() {
       <footer className="py-8 px-4 border-t border-white/10 bg-black/30 dark:bg-gray-300 dark:border-black/10">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-gray-400 text-center md:text-left dark:text-gray-700">
+            <div className="text-gray-800 text-center md:text-left dark:text-black-900">
               <p>
-                © 2024 Jay Ghori. Built with ❤️ using React, Next.js, and Framer
-                Motion.
+                © 2024 Jay Ghori. Built with ❤️ using React, and Framer Motion.
               </p>
             </div>
             <div className="flex gap-4">
               {[
                 { icon: Github, href: "https://github.com/jayghori" },
-                { icon: Linkedin, href: "https://linkedin.com/in/jay-ghori" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/jay-ghori-99b7641a0/",
+                },
                 { icon: Mail, href: "mailto:jayghori2662@gmail.com" },
               ].map((social, index) => (
                 <motion.a

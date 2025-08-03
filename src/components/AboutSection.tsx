@@ -44,7 +44,7 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              Results-driven Software Developer with 3.9+ years of experience in
+              Results-driven Software Developer with 4 years of experience in
               building scalable web and mobile applications using React.js,
               React Native, JavaScript, and TypeScript. I specialize in creating
               responsive UI/UX with clean architecture and optimized
@@ -59,7 +59,7 @@ export default function AboutSection() {
             </p>
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
-                <div className="text-3xl font-bold text-purple-400">3.9+</div>
+                <div className="text-3xl font-bold text-purple-400">4</div>
                 <div className="text-gray-300">Years Experience</div>
               </div>
               <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">

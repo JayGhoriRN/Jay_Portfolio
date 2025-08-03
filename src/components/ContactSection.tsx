@@ -43,7 +43,7 @@ export default function ContactSection() {
           </motion.a>
 
           <motion.a
-            href="https://linkedin.com/in/jay-ghori"
+            href="https://www.linkedin.com/in/jay-ghori-99b7641a0/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm"
