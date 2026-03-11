@@ -44,7 +44,7 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              Results-driven Software Developer with 4 years of experience in
+              Results-driven Software Developer with 4+ years of experience in
               building scalable web and mobile applications using React.js,
               React Native, JavaScript, and TypeScript. I specialize in creating
               responsive UI/UX with clean architecture and optimized

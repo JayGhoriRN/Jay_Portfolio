@@ -114,11 +114,10 @@ export default function Portfolio() {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`capitalize transition-colors relative ${
-                    activeSection === item.id
-                      ? "text-purple-400"
-                      : "text-white hover:text-purple-300 dark:text-black dark:hover:text-purple-600"
-                  }`}
+                  className={`capitalize transition-colors relative ${activeSection === item.id
+                    ? "text-purple-400"
+                    : "text-white hover:text-purple-300 dark:text-black dark:hover:text-purple-600"
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -222,7 +221,7 @@ export default function Portfolio() {
             >
               Senior Frontend Developer with{" "}
               <span className="text-purple-400 font-semibold dark:text-purple-700">
-                4 years
+                4+ years
               </span>{" "}
               of experience in React.js, React Native, and modern web
               technologies
@@ -420,7 +419,7 @@ export default function Portfolio() {
                 <p className="text-lg text-foreground leading-relaxed dark:text-gray-700">
                   Results-driven Software Developer with{" "}
                   <span className="text-purple-400 font-semibold dark:text-purple-700">
-                    4 years
+                    4+ years
                   </span>{" "}
                   of experience in building scalable web and mobile applications
                   using{" "}
@@ -521,7 +520,7 @@ export default function Portfolio() {
               {
                 company: "Onrois",
                 position: "Senior Frontend Developer",
-                duration: "December 2023 – June 2025",
+                duration: "December 2023 – February 2026",
                 location: "Gujarat, India",
                 logo: "🚀",
                 achievements: [
@@ -899,11 +898,10 @@ export default function Portfolio() {
 
                     {/* Status Badge */}
                     <div
-                      className={`absolute top-4 right-4 px-2 py-1 rounded text-xs font-medium ${
-                        project.status === "Live"
-                          ? "bg-green-600 text-white dark:bg-green-700"
-                          : "bg-gray-600 text-white dark:bg-gray-700"
-                      }`}
+                      className={`absolute top-4 right-4 px-2 py-1 rounded text-xs font-medium ${project.status === "Live"
+                        ? "bg-green-600 text-white dark:bg-green-700"
+                        : "bg-gray-600 text-white dark:bg-gray-700"
+                        }`}
                     >
                       {project.status}
                     </div>

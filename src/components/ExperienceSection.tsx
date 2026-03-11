@@ -14,7 +14,7 @@ export default function ExperienceSection() {
     {
       company: "Onrois",
       position: "Senior Frontend Developer",
-      duration: "December 2023 – June 2025",
+      duration: "December 2023 – February 2026",
       location: "Gujarat, India",
       achievements: [
         "Led and managed multiple end-to-end web and mobile app projects using React.js and React Native",
