@@ -439,7 +439,7 @@ export default function Portfolio() {
                     color: "text-purple-400 dark:text-purple-700",
                   },
                   {
-                    number: "15K+",
+                    number: "100K+",
                     label: "App Downloads",
                     icon: Download,
                     color: "text-blue-400 dark:text-blue-700",

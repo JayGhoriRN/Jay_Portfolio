@@ -64,7 +64,7 @@ export default function AboutSection() {
                 <div className="text-gray-300">Years Experience</div>
               </div>
               <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
-                <div className="text-3xl font-bold text-blue-400">15K+</div>
+                <div className="text-3xl font-bold text-blue-400">100K+</div>
                 <div className="text-gray-300">App Downloads</div>
               </div>
             </div>
