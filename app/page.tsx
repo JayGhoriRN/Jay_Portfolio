@@ -558,7 +558,7 @@ export default function Portfolio() {
               {
                 company: "Daydream Soft Infotech",
                 position: "React Native Developer",
-                duration: "August 2021 – April 2022",
+                duration: "May 2021 – April 2022",
                 location: "Gujarat, India",
                 logo: "/daydreamsoft_logo.jpeg",
                 achievements: [

@@ -84,7 +84,7 @@ export default function Portfolio() {
       {/* Removed hardcoded background */}
       {/* Navigation */}
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10 dark:bg-white/10 dark:border-black/10"
+        className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/20 backdrop-blur-md border-b border-gray-200 dark:border-white/10"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -92,7 +92,7 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <motion.div
-              className="text-2xl font-bold text-white dark:text-black"
+              className="text-2xl font-bold text-gray-900 dark:text-white"
               whileHover={{ scale: 1.05 }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
@@ -116,7 +116,7 @@ export default function Portfolio() {
                   onClick={() => scrollToSection(item.id)}
                   className={`capitalize transition-colors relative ${activeSection === item.id
                     ? "text-purple-400"
-                    : "text-white hover:text-purple-300 dark:text-black dark:hover:text-purple-600"
+                    : "text-gray-700 hover:text-purple-600 dark:text-white dark:hover:text-purple-300"
                     }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -141,12 +141,12 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-gray-100 dark:via-gray-200 dark:to-gray-100"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900"
       >
         <motion.div style={{ y }} className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 dark:from-purple-300/20 dark:to-blue-300/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-300/20 to-blue-300/20 dark:from-purple-600/20 dark:to-blue-600/20" />
           <motion.div
-            className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl dark:bg-purple-400/30"
+            className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-400/30 dark:bg-purple-500/30 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -154,7 +154,7 @@ export default function Portfolio() {
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
           />
           <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl dark:bg-blue-400/30"
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/30 dark:bg-blue-500/30 rounded-full blur-3xl"
             animate={{
               scale: [1.2, 1, 1.2],
               opacity: [0.5, 0.3, 0.5],
@@ -181,7 +181,7 @@ export default function Portfolio() {
             >
               <div className="w-32 h-32 mx-auto mb-6 relative">
                 <motion.div
-                  className="w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 rounded-full p-1 animate-pulse-glow dark:from-purple-400 dark:to-blue-400"
+                  className="w-full h-full bg-gradient-to-br from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-full p-1 animate-pulse-glow"
                   animate={{ rotate: 360 }}
                   transition={{
                     duration: 20,
@@ -189,15 +189,15 @@ export default function Portfolio() {
                     ease: "linear",
                   }}
                 >
-                  <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center dark:bg-gray-50">
-                    <Code className="w-16 h-16 text-purple-400 dark:text-purple-700" />
+                  <div className="w-full h-full bg-gray-50 dark:bg-slate-900 rounded-full flex items-center justify-center">
+                    <Code className="w-16 h-16 text-purple-700 dark:text-purple-400" />
                   </div>
                 </motion.div>
               </div>
             </motion.div>
 
             <motion.h1
-              className="text-5xl md:text-7xl font-bold text-white mb-6 dark:text-gray-900"
+              className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 dark:text-white"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -214,7 +214,7 @@ export default function Portfolio() {
             </motion.h1>
 
             <motion.p
-              className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto dark:text-gray-700"
+              className="text-xl md:text-2xl text-gray-700 mb-4 max-w-3xl mx-auto dark:text-gray-300"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -225,7 +225,7 @@ export default function Portfolio() {
             </motion.p>
 
             <motion.div
-              className="flex items-center justify-center gap-6 text-gray-400 mb-8 flex-wrap dark:text-gray-600"
+              className="flex items-center justify-center gap-6 text-gray-600 mb-8 flex-wrap dark:text-gray-400"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -280,7 +280,7 @@ export default function Portfolio() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white/30 text-white hover:bg-white/10 px-8 py-3 bg-transparent backdrop-blur-sm dark:border-gray-400 dark:text-gray-800 dark:hover:bg-gray-200"
+                  className="border-gray-400 text-gray-800 hover:bg-gray-200 dark:border-white/30 dark:text-white dark:hover:bg-white/10 px-8 py-3 bg-transparent backdrop-blur-sm"
                   onClick={() => scrollToSection("contact")}
                 >
                   <Download className="w-4 h-4 mr-2" />
@@ -331,7 +331,7 @@ export default function Portfolio() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float"
           onClick={() => scrollToSection("about")}
         >
-          <ChevronDown className="w-8 h-8 text-white/60 dark:text-gray-700 cursor-pointer hover:text-white dark:hover:text-gray-900 transition-colors" />
+          <ChevronDown className="w-8 h-8 text-gray-500 dark:text-white/60 cursor-pointer hover:text-gray-700 dark:hover:text-white transition-colors" />
         </motion.div>
       </section>
       {/* About Section */}
@@ -552,7 +552,7 @@ export default function Portfolio() {
               {
                 company: "Daydream Soft Infotech",
                 position: "React Native Developer",
-                duration: "August 2021 – April 2022",
+                duration: "May 2021 – April 2022",
                 location: "Gujarat, India",
                 logo: "💭",
                 achievements: [
