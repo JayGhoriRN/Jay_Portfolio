@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Jay Ghori - Frontend Developer Portfolio",
   description:
-    "Senior Frontend Developer with 4+ years of experience in React.js, React Native, and modern web technologies",
+    "Results-driven Software Developer with 4+ years of experience, specializing in React Native and React.js to deliver high-performing mobile and web applications",
 };
 
 export default function RootLayout({

@@ -219,12 +219,9 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Senior Frontend Developer with{" "}
-              <span className="text-purple-400 font-semibold dark:text-purple-700">
-                4+ years
-              </span>{" "}
-              of experience in React.js, React Native, and modern web
-              technologies
+              Results-driven Software Developer with 4+ years of experience,
+              specializing in React Native and React.js to deliver
+              high-performing mobile and web applications.
             </motion.p>
 
             <motion.div
@@ -417,31 +414,26 @@ export default function Portfolio() {
             >
               <div className="space-y-4">
                 <p className="text-lg text-foreground leading-relaxed dark:text-gray-700">
-                  Results-driven Software Developer with{" "}
-                  <span className="text-purple-400 font-semibold dark:text-purple-700">
-                    4+ years
-                  </span>{" "}
-                  of experience in building scalable web and mobile applications
-                  using{" "}
-                  <span className="text-blue-400 font-semibold dark:text-blue-700">
-                    React.js
-                  </span>
-                  ,{" "}
-                  <span className="text-blue-400 font-semibold dark:text-blue-700">
-                    React Native
-                  </span>
-                  , JavaScript, and TypeScript.
+                  Results-driven Software Developer with 4+ years of experience,
+                  specializing in React Native and React.js. I focus on
+                  delivering high-performing mobile and web applications with
+                  clean architecture, smooth user experiences, and
+                  production-ready quality.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed dark:text-gray-700">
-                  Experienced in integrating RESTful APIs and GraphQL, managing
-                  state with Redux and Context API.
+                  Skilled in Redux Toolkit, Firebase &amp; Firestore, secure
+                  payment integrations (Stripe, Razorpay, React Native IAP),
+                  and video/voice call features, with hands-on experience using
+                  Expo, Xcode, and Android Studio. I collaborate closely with
+                  founders, designers, and backend teams to ship scalable
+                  fintech and product-focused solutions end to end.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
                   {
-                    number: "4",
+                    number: "4+",
                     label: "Years Experience",
                     icon: Calendar,
                     color: "text-purple-400 dark:text-purple-700",

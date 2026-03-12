@@ -38,11 +38,11 @@ export default function ExperienceSection() {
     {
       company: "Daydream Soft Infotech",
       position: "React Native Developer",
-      duration: "August 2021 – April 2022",
+      duration: "May 2021 – April 2022",
       location: "Gujarat, India",
       achievements: [
         "Worked with Korean-based IT company on Corona Test Claim App maintenance and customization",
-        "Built Wordle-style game from scratch showcasing frontend development skills",
+        "Built a Wordle-style game from scratch, demonstrating strong frontend development and creative problem-solving skills",
         "Participated in issue tracking with JIRA and practiced Git-based version control in CI/CD workflows",
       ],
     },

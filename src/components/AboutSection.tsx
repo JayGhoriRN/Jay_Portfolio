@@ -44,22 +44,23 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              Results-driven Software Developer with 4+ years of experience in
-              building scalable web and mobile applications using React.js,
-              React Native, JavaScript, and TypeScript. I specialize in creating
-              responsive UI/UX with clean architecture and optimized
-              performance.
+              Results-driven Software Developer with 4+ years of experience,
+              specializing in React Native and React.js. I focus on delivering
+              high-performing mobile and web applications with clean
+              architecture, smooth user experiences, and production-ready
+              quality.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Experienced in integrating RESTful APIs and GraphQL, managing
-              state with Redux and Context API, and working with tools like
-              Firebase, SQLite, and Expo. I excel at collaborating with
-              cross-functional teams to deliver high-quality, pixel-perfect
-              solutions from concept to deployment.
+              Skilled in Redux Toolkit, Firebase &amp; Firestore, secure payment
+              integrations (Stripe, Razorpay, React Native IAP), and
+              video/voice call features, with hands-on experience using Expo,
+              Xcode, and Android Studio. I collaborate closely with founders,
+              designers, and backend teams to ship scalable fintech and
+              product-focused solutions end to end.
             </p>
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
-                <div className="text-3xl font-bold text-purple-400">4</div>
+                <div className="text-3xl font-bold text-purple-400">4+</div>
                 <div className="text-gray-300">Years Experience</div>
               </div>
               <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">

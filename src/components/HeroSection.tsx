@@ -53,8 +53,9 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Senior Frontend Developer with 4+ years of experience in React.js,
-            React Native, and modern web technologies
+            Results-driven Software Developer with 4+ years of experience,
+            specializing in React Native and React.js to deliver high-performing
+            mobile and web applications.
           </motion.p>
 
           <motion.div
